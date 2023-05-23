@@ -966,7 +966,7 @@ def create_ui():
             )
 
             img2img_prompt.submit(**img2img_args)
-            submit.click(**img2img_args)
+            submit.click(**img2img_args, api_name="img2img")
             res_switch_btn.click(lambda w, h: (h, w), inputs=[width, height], outputs=[width, height], show_progress=False)
 
             restore_progress_button.click(
